@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+   package="com.carnext" 
+   android:installLocation="auto"
+   android:versionCode="1">
+  
+    
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:label="CarNext">
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyB5askymVYoCPkFBSRtVadoDl8UxX6GO2A" />
+	</application>
+  
+  
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+	<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+	<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-sdk />
+</manifest>

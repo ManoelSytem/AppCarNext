@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CarNext.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewfolrder="clr-namespace:CarNext.View"
+    xmlns:local="clr-namespace:CarNext"
+    Shell.FlyoutBehavior="Disabled"
+    Title="CarNext">
+
+    <ShellItem Route="welcome">
+        <ShellContent ContentTemplate="{DataTemplate viewfolrder:MapPage}" />
+    </ShellItem>
+    <TabBar Route="main">
+        <Tab
+        Title="Início"
+        Icon="inicio.png"
+        Route="Inicio">
+            <ShellContent ContentTemplate="{DataTemplate viewfolrder:InicioPage}" />
+        </Tab>
+        <Tab
+        Title="Opções"
+        Icon="opcao.png"
+        Route="Opcao">
+            <ShellContent ContentTemplate="{DataTemplate viewfolrder:InicioPage}" />
+        </Tab>
+        <Tab
+        Title="Atividade"
+        Icon="atividade.png"
+        Route="drivers">
+            <ShellContent ContentTemplate="{DataTemplate viewfolrder:InicioPage}" />
+        </Tab>
+        <Tab
+        Title="Conta"
+        Icon="perfil.png"
+        Route="Perfil">
+            <ShellContent ContentTemplate="{DataTemplate viewfolrder:InicioPage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

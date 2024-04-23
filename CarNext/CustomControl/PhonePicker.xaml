@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarNext.CustomControl.PhonePicker"
+             xmlns:carnext="clr-namespace:CarNext.CustomControl">
+    
+    <ContentView.Content>
+        <Frame WidthRequest="140" BackgroundColor="#EEEEEE" Padding="0" Margin="25,0,10,0" CornerRadius="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="1" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+
+                <carnext:BorderlessPicker  x:Name="borderlessPicker1" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="10, 0, 0, 0"  />
+
+                <Button Grid.Row="0"  Grid.Column="2" x:Name="buttondropdow"  ImageSource="setaprabaixo.png" VerticalOptions="Center" HorizontalOptions="Center"  BorderWidth="0" BackgroundColor="Transparent" Margin="0" WidthRequest="48" />
+
+            </Grid>
+
+        </Frame>
+    </ContentView.Content>
+</ContentView>

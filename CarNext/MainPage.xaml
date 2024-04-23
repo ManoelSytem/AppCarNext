@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarNext.MainPage"
+             xmlns:controls="clr-namespace:CarNext.CustomControl"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#ffffff">
+
+       <!--#region Entrada dados-->
+
+       <VerticalStackLayout>
+            <Label
+             Margin="10"
+             FontSize="18"
+             TextColor="Black"
+             Text="Digite seu número de celular"
+             FontFamily="normal"  
+             SemanticProperties.HeadingLevel="Level1" />
+
+
+        <Grid RowSpacing="10"
+              ColumnSpacing="2">
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="140"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            
+            <controls:PhonePicker ItemDisplay="{Binding Value}" Title="Selecione..." Grid.Column="0" Margin="10,0,10,0" />
+            <controls:CustomEntry Text="{Binding NumeroTelefone}" Keyboard="Numeric" Margin="10,0,10,0" Grid.Row="0"  Grid.Column="1" Placeholder="Digite seu número" BorderColor="Black" BorderThickness="2" CornerRadius="10" Padding="10" HeightRequest="60"></controls:CustomEntry>
+
+
+            <Button Style="{StaticResource btncontinuar}"
+               Grid.Row="2"
+               Grid.ColumnSpan="2"
+               x:Name="avancaBtn"
+               Text="CONTINUAR" 
+               Command="{Binding LoginCommand}"
+               HorizontalOptions="Fill" />
+           
+
+            <Image  Grid.Row="2" Grid.Column="1" Source="seta.png" HorizontalOptions="EndAndExpand"   HeightRequest="20"  Margin="0,0,30,0" />
+             
+            
+        </Grid>
+        <!--#endregion-->
+
+       <!--#region Informações-->
+
+        <Label
+         Margin="10"
+         FontSize="16"
+         TextColor="#A99999"    
+         Text="Para continuar você deverá informa um número para receber o SMS e código de verificação.
+             Se preferir utilize outras formas de login abaixo."
+         FontFamily="normal"  
+         SemanticProperties.HeadingLevel="Level1" />
+     
+
+        <HorizontalStackLayout>
+            <BoxView Color="Gray" HeightRequest="1"  HorizontalOptions="Start" WidthRequest="180" Margin="10,30,0,0" />
+            <Label Text="OU"  FontSize="12" Margin="5,30,0,0" HorizontalOptions="Center" />
+            <BoxView Color="Gray" HeightRequest="1"  HorizontalOptions="End" WidthRequest="180" Margin="10,30,0,0" />
+        </HorizontalStackLayout>
+        <!--#endregion-->
+
+       <!--#region botao login rede social-->
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Button Command="{Binding LoginCommand}" Grid.Row="0" x:Name="btngoogle"  HeightRequest="50" Style="{StaticResource btnsocial}" TextColor="Black" Text="Continuar com o Google"  BorderWidth="1"   BorderColor="Black" HorizontalOptions="FillAndExpand" />
+            <Image  x:Name="imgicongoogle"  Grid.Row="0" Grid.Column="1" Source="icon_google.png" Style="{StaticResource btnimgsocial}" />
+
+            <Button  Grid.Row="1" x:Name="btnios" HeightRequest="50"  TextColor="Black" Text="Continuar com a Apple" Style="{StaticResource btnsocial}"  BorderWidth="1"  BackgroundColor="#FFFFFF" BorderColor="Black"  HorizontalOptions="Fill" />
+            <Image x:Name="imgiconapple"  Grid.Row="1" Grid.Column="1" Source="icon_apple.png" Style="{StaticResource btnimgsocial}" />
+
+            <Button  Grid.Row="2" x:Name="btnEmail" HeightRequest="50"   TextColor="Black" Text="Continuar com o Email" Style="{StaticResource btnsocial}"  BorderWidth="1"  BackgroundColor="#FFFFFF" BorderColor="Black" HorizontalOptions="Fill" />
+            <Image x:Name="imgiconemail"  Grid.Row="2" Grid.Column="1" Source="icon_email.png" Style="{StaticResource btnimgsocial}" />
+
+
+        </Grid>
+
+        <!--<ActivityIndicator
+            Color="Blue"
+            IsRunning="{Binding ActivityIndicatorIsRunning}" />-->
+
+        <!--#endregion-->
+
+    </VerticalStackLayout>
+
+
+  
+
+</ContentPage>
